@@ -67,28 +67,28 @@ public class MainActivity extends AppCompatActivity {
 
         Typeface tf = Typeface.createFromAsset(getAssets(), "OpenSans-Regular.ttf");
 
-        LimitLine ll1 = new LimitLine(60f, "Upper Limit");
-        ll1.setLineWidth(2f);
-        ll1.enableDashedLine(0f, 0f, 0f);
-        ll1.setLabelPosition(LimitLine.LimitLabelPosition.RIGHT_TOP);
-        ll1.setTextSize(10f);
-        ll1.setTypeface(tf);
-        ll1.setTextColor(Color.RED);
-        ll1.setLineColor(Color.RED);
-
-        LimitLine ll2 = new LimitLine(45f, "Lower Limit");
-        ll2.setLineWidth(2f);
-        ll2.enableDashedLine(0f, 0f, 0f);
-        ll2.setLabelPosition(LimitLine.LimitLabelPosition.RIGHT_BOTTOM);
-        ll2.setTextSize(10f);
-        ll2.setTypeface(tf);
-        ll2.setTextColor(Color.BLUE);
-        ll2.setLineColor(Color.BLUE);
+//        LimitLine ll1 = new LimitLine(60f, "Upper Limit");
+//        ll1.setLineWidth(2f);
+//        ll1.enableDashedLine(0f, 0f, 0f);
+//        ll1.setLabelPosition(LimitLine.LimitLabelPosition.RIGHT_TOP);
+//        ll1.setTextSize(10f);
+//        ll1.setTypeface(tf);
+//        ll1.setTextColor(Color.YELLOW);
+//        ll1.setLineColor(Color.YELLOW);
+//
+//        LimitLine ll2 = new LimitLine(45f, "Lower Limit");
+//        ll2.setLineWidth(2f);
+//        ll2.enableDashedLine(0f, 0f, 0f);
+//        ll2.setLabelPosition(LimitLine.LimitLabelPosition.RIGHT_BOTTOM);
+//        ll2.setTextSize(10f);
+//        ll2.setTypeface(tf);
+//        ll2.setTextColor(Color.RED);
+//        ll2.setLineColor(Color.RED);
 
         YAxis leftAxis = mChart.getAxisLeft();
         leftAxis.removeAllLimitLines(); // reset all limit lines to avoid overlapping lines
-        leftAxis.addLimitLine(ll1);
-        leftAxis.addLimitLine(ll2);
+        //leftAxis.addLimitLine(ll1);
+        //leftAxis.addLimitLine(ll2);
         leftAxis.setAxisMaximum(62.0f);
         leftAxis.setAxisMinimum(44.0f);
         //leftAxis.setYOffset(20f);
@@ -131,16 +131,36 @@ public class MainActivity extends AppCompatActivity {
 
         for (int i = 2; i < count; i = i + 4) {
 
-            float val = (float) (Math.random() * range) + 44;
+            float val = (float) (Math.random() * range) + 46;
             values.add(new Entry(i, val));
         }
 
-        LineDataSet set1;
+        ArrayList<Entry> values1 = new ArrayList<Entry>();
+
+        for (int i = 2; i < count; i = i + 6) {
+
+            float val = (float) (Math.random() * range) + 44;
+            values1.add(new Entry(i, val));
+        }
+
+        ArrayList<Entry> values2 = new ArrayList<Entry>();
+
+        for (int i = 2; i < count; i = i + 8) {
+
+            float val = (float) (Math.random() * range) + 50;
+            values2.add(new Entry(i, val));
+        }
+
+        LineDataSet set1, set2, set3;;
 
         if (mChart.getData() != null &&
                 mChart.getData().getDataSetCount() > 0) {
             set1 = (LineDataSet)mChart.getData().getDataSetByIndex(0);
+            set2 = (LineDataSet) mChart.getData().getDataSetByIndex(1);
+            set3 = (LineDataSet) mChart.getData().getDataSetByIndex(2);
             set1.setValues(values);
+            set2.setValues(values1);
+            set3.setValues(values2);
             mChart.getData().notifyDataChanged();
             mChart.notifyDataSetChanged();
         } else {
@@ -150,8 +170,8 @@ public class MainActivity extends AppCompatActivity {
             // set the line to be drawn like this "- - - - - -"
             set1.enableDashedLine(0f, 0f, 0f);
             set1.enableDashedHighlightLine(10f, 5f, 0f);
-            set1.setColor(Color.BLACK);
-            set1.setCircleColor(Color.BLACK);
+            set1.setColor(Color.BLUE);
+            set1.setCircleColor(Color.BLUE);
             set1.setLineWidth(1f);
             set1.setCircleRadius(3f);
             set1.setDrawCircleHole(false);
@@ -170,8 +190,44 @@ public class MainActivity extends AppCompatActivity {
 //                set1.setFillColor(Color.BLACK);
 //            }
 
+            // create a dataset and give it a type
+            set2 = new LineDataSet(values1, null);
+
+            // set the line to be drawn like this "- - - - - -"
+            set2.enableDashedLine(0f, 0f, 0f);
+            set2.enableDashedHighlightLine(10f, 5f, 0f);
+            set2.setColor(Color.RED);
+            set2.setCircleColor(Color.RED);
+            set2.setLineWidth(1f);
+            set2.setCircleRadius(3f);
+            set2.setDrawCircleHole(false);
+            set2.setValueTextSize(9f);
+            //set1.setDrawFilled(true);
+            set2.setFormLineWidth(1f);
+            set2.setFormLineDashEffect(new DashPathEffect(new float[]{10f, 5f}, 0f));
+            set2.setFormSize(0.f);
+
+            // create a dataset and give it a type
+            set3 = new LineDataSet(values2, null);
+
+            // set the line to be drawn like this "- - - - - -"
+            set3.enableDashedLine(0f, 0f, 0f);
+            set3.enableDashedHighlightLine(10f, 5f, 0f);
+            set3.setColor(Color.YELLOW);
+            set3.setCircleColor(Color.YELLOW);
+            set3.setLineWidth(1f);
+            set3.setCircleRadius(3f);
+            set3.setDrawCircleHole(false);
+            set3.setValueTextSize(9f);
+            //set1.setDrawFilled(true);
+            set3.setFormLineWidth(1f);
+            set3.setFormLineDashEffect(new DashPathEffect(new float[]{10f, 5f}, 0f));
+            set3.setFormSize(0.f);
+
             ArrayList<ILineDataSet> dataSets = new ArrayList<ILineDataSet>();
             dataSets.add(set1); // add the datasets
+            dataSets.add(set2); // add the datasets
+            dataSets.add(set3); // add the datasets
 
             // create a data object with the datasets
             LineData data = new LineData(dataSets);
@@ -180,4 +236,5 @@ public class MainActivity extends AppCompatActivity {
             mChart.setData(data);
         }
     }
+
 }
