@@ -151,6 +151,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtnButton1.setOnClickListener(this);
         mBtnButton2.setOnClickListener(this);
         mBtnButton3.setOnClickListener(this);
+        mBtnButton1.setSelected(true);
     }
 
     private void setData(int count, float range) {

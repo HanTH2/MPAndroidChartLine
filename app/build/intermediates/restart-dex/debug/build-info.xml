@@ -4,31 +4,29 @@
     api-level="21"
     density="xxhdpi"
     format="7"
-    timestamp="29915870154071"
-    token="-3214343740110970318" >
+    timestamp="30102040526469"
+    token="-3214343740110970318"
+    verifier="COMPATIBLE" >
 
     <task
         name="javac"
-        duration="4488" />
+        duration="816" />
     <task
         name="instant-run-dex"
-        duration="0" />
+        duration="874" />
     <task
         name="instant-run-transform"
-        duration="891" />
+        duration="25" />
     <task
         name="verifier"
-        duration="31" />
+        duration="2" />
 
     <artifact
         location="D:\Android\MPAndroidChartLine\app\build\intermediates\res\resources-debug.ap_"
         type="RESOURCES" />
     <artifact
-        location="D:\Android\MPAndroidChartLine\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_2\classes.dex"
-        type="DEX" />
-    <artifact
-        location="D:\Android\MPAndroidChartLine\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_0\classes.dex"
-        type="DEX" />
+        location="D:\Android\MPAndroidChartLine\app\build\intermediates\reload-dex\debug\classes.dex"
+        type="RELOAD_DEX" />
 
     <build timestamp="18134351002058" >
         <artifact
@@ -37,14 +35,21 @@
     </build>
     <build timestamp="29915870154071" >
         <artifact
-            location="D:\Android\MPAndroidChartLine\app\build\intermediates\res\resources-debug.ap_"
-            type="RESOURCES" />
-        <artifact
             location="D:\Android\MPAndroidChartLine\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_2\classes.dex"
             type="DEX" />
         <artifact
             location="D:\Android\MPAndroidChartLine\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_0\classes.dex"
             type="DEX" />
+    </build>
+    <build
+        timestamp="30102040526469"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="D:\Android\MPAndroidChartLine\app\build\intermediates\res\resources-debug.ap_"
+            type="RESOURCES" />
+        <artifact
+            location="D:\Android\MPAndroidChartLine\app\build\intermediates\reload-dex\debug\classes.dex"
+            type="RELOAD_DEX" />
     </build>
 
 </instant-run>
