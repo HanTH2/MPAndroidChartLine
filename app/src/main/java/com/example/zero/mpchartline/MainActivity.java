@@ -3,6 +3,8 @@ package com.example.zero.mpchartline;
 import android.graphics.Color;
 import android.graphics.DashPathEffect;
 import android.graphics.Typeface;
+import android.graphics.drawable.Drawable;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -15,6 +17,7 @@ import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
 import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
+import com.github.mikephil.charting.utils.Utils;
 
 import java.util.ArrayList;
 
@@ -45,6 +48,9 @@ public class MainActivity extends AppCompatActivity {
         // if disabled, scaling can be done on x- and y-axis separately
         mChart.setPinchZoom(true);
         mChart.getXAxis().setPosition(XAxis.XAxisPosition.BOTTOM);
+        mChart.setDrawGridBackground(true);
+        mChart.setDrawBorders(true);
+        mChart.setBorderColor(Color.BLUE);
         //mChart.setVisibleXRange(0, 10);
 
         // set an alternative background color
@@ -62,6 +68,8 @@ public class MainActivity extends AppCompatActivity {
         xAxis.setAxisMaximum(44f);
         xAxis.setAxisMinimum(0f);
         xAxis.setLabelCount(12, true);
+        xAxis.setGridColor(R.color.colorBrown);
+        xAxis.setAxisLineColor(R.color.colorBrown);
         //xAxis.setValueFormatter(new MyXAxisValueFormatter());
         //xAxis.addLimitLine(llXAxis); // add x-axis limit line
 
@@ -183,7 +191,7 @@ public class MainActivity extends AppCompatActivity {
 
 //            if (Utils.getSDKInt() >= 18) {
 //                // fill drawable only supported on api level 18 and above
-//                Drawable drawable = ContextCompat.getDrawable(this, R.drawable.fade_red);
+//                Drawable drawable = ContextCompat.getDrawable(this, R.drawable.fade_brown);
 //                set1.setFillDrawable(drawable);
 //            }
 //            else {

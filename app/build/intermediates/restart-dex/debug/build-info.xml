@@ -4,64 +4,50 @@
     api-level="21"
     density="xxhdpi"
     format="7"
-    timestamp="12566649173037"
+    timestamp="21012202701702"
     token="-3214343740110970318"
-    verifier="COMPATIBLE" >
+    verifier="R_CLASS_CHANGE" >
 
     <task
         name="javac"
-        duration="230" />
+        duration="701" />
     <task
         name="instant-run-dex"
-        duration="646" />
+        duration="0" />
     <task
         name="instant-run-transform"
-        duration="54" />
+        duration="98" />
     <task
         name="verifier"
-        duration="2" />
+        duration="71" />
 
     <artifact
-        location="D:\Android\MPAndroidChartLine\app\build\intermediates\reload-dex\debug\classes.dex"
-        type="RELOAD_DEX" />
+        location="D:\Android\MPAndroidChartLine\app\build\intermediates\res\resources-debug.ap_"
+        type="RESOURCES" />
+    <artifact
+        location="D:\Android\MPAndroidChartLine\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_2\classes.dex"
+        type="DEX" />
+    <artifact
+        location="D:\Android\MPAndroidChartLine\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_0\classes.dex"
+        type="DEX" />
 
-    <build timestamp="9020916160142" >
+    <build timestamp="18134351002058" >
         <artifact
             location="D:\Android\MPAndroidChartLine\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
     </build>
-    <build timestamp="12436440123406" >
+    <build
+        timestamp="21012202701702"
+        verifier="R_CLASS_CHANGE" >
+        <artifact
+            location="D:\Android\MPAndroidChartLine\app\build\intermediates\res\resources-debug.ap_"
+            type="RESOURCES" />
+        <artifact
+            location="D:\Android\MPAndroidChartLine\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_2\classes.dex"
+            type="DEX" />
         <artifact
             location="D:\Android\MPAndroidChartLine\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_0\classes.dex"
             type="DEX" />
-    </build>
-    <build
-        timestamp="12497218731534"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="D:\Android\MPAndroidChartLine\app\build\intermediates\builds\debug\12497218731534\classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build
-        timestamp="12523298849902"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="D:\Android\MPAndroidChartLine\app\build\intermediates\builds\debug\12523298849902\classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build
-        timestamp="12547325120825"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="D:\Android\MPAndroidChartLine\app\build\intermediates\builds\debug\12547325120825\classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build
-        timestamp="12566649173037"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="D:\Android\MPAndroidChartLine\app\build\intermediates\reload-dex\debug\classes.dex"
-            type="RELOAD_DEX" />
     </build>
 
 </instant-run>
