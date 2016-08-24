@@ -53,12 +53,12 @@ public class MainActivity extends AppCompatActivity {
         // x-axis limit line
         LimitLine llXAxis = new LimitLine(10f, "Index 10");
         llXAxis.setLineWidth(3f);
-        llXAxis.enableDashedLine(10f, 0f, 0f);
+        llXAxis.enableDashedLine(0f, 0f, 0f);
         llXAxis.setLabelPosition(LimitLine.LimitLabelPosition.RIGHT_BOTTOM);
         llXAxis.setTextSize(10f);
 
         XAxis xAxis = mChart.getXAxis();
-        xAxis.enableGridDashedLine(10f, 10f, 0f);
+        xAxis.enableGridDashedLine(0f, 0f, 0f);
         xAxis.setAxisMaximum(44f);
         xAxis.setAxisMinimum(0f);
         xAxis.setLabelCount(12, true);
@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
 
         LimitLine ll1 = new LimitLine(60f, "Upper Limit");
         ll1.setLineWidth(2f);
-        ll1.enableDashedLine(10f, 10f, 0f);
+        ll1.enableDashedLine(0f, 0f, 0f);
         ll1.setLabelPosition(LimitLine.LimitLabelPosition.RIGHT_TOP);
         ll1.setTextSize(10f);
         ll1.setTypeface(tf);
@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
 
         LimitLine ll2 = new LimitLine(45f, "Lower Limit");
         ll2.setLineWidth(2f);
-        ll2.enableDashedLine(10f, 10f, 0f);
+        ll2.enableDashedLine(0f, 0f, 0f);
         ll2.setLabelPosition(LimitLine.LimitLabelPosition.RIGHT_BOTTOM);
         ll2.setTextSize(10f);
         ll2.setTypeface(tf);
@@ -92,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
         leftAxis.setAxisMaximum(62.0f);
         leftAxis.setAxisMinimum(44.0f);
         //leftAxis.setYOffset(20f);
-        leftAxis.enableGridDashedLine(10f, 10f, 0f);
+        leftAxis.enableGridDashedLine(0f, 0f, 0f);
         leftAxis.setDrawZeroLine(true);
         leftAxis.setLabelCount(10, true);
 
@@ -145,10 +145,10 @@ public class MainActivity extends AppCompatActivity {
             mChart.notifyDataSetChanged();
         } else {
             // create a dataset and give it a type
-            set1 = new LineDataSet(values, "DataSet 1");
+            set1 = new LineDataSet(values, null);
 
             // set the line to be drawn like this "- - - - - -"
-            set1.enableDashedLine(10f, 5f, 0f);
+            set1.enableDashedLine(0f, 0f, 0f);
             set1.enableDashedHighlightLine(10f, 5f, 0f);
             set1.setColor(Color.BLACK);
             set1.setCircleColor(Color.BLACK);
@@ -156,10 +156,10 @@ public class MainActivity extends AppCompatActivity {
             set1.setCircleRadius(3f);
             set1.setDrawCircleHole(false);
             set1.setValueTextSize(9f);
-            set1.setDrawFilled(true);
+            //set1.setDrawFilled(true);
             set1.setFormLineWidth(1f);
             set1.setFormLineDashEffect(new DashPathEffect(new float[]{10f, 5f}, 0f));
-            set1.setFormSize(15.f);
+            set1.setFormSize(0.f);
 
 //            if (Utils.getSDKInt() >= 18) {
 //                // fill drawable only supported on api level 18 and above
