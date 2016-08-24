@@ -7,6 +7,9 @@ import android.graphics.drawable.Drawable;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.RadioButton;
 
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.components.Legend;
@@ -21,14 +24,16 @@ import com.github.mikephil.charting.utils.Utils;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
     private LineChart mChart;
+    private RadioButton mBtnRadio1, mBtnRadio2, mBtnRadio3;
+    private Button mBtnButton1, mBtnButton2, mBtnButton3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        initView();
         mChart = (LineChart) findViewById(R.id.chart1);
         mChart.setDrawGridBackground(false);
 
@@ -131,6 +136,21 @@ public class MainActivity extends AppCompatActivity {
 
         // // dont forget to refresh the drawing
         // mChart.invalidate();
+    }
+
+    private void initView(){
+        mBtnRadio1 = (RadioButton)findViewById(R.id.btn_radio1);
+        mBtnRadio2 = (RadioButton)findViewById(R.id.btn_radio2);
+        mBtnRadio3 = (RadioButton)findViewById(R.id.btn_radio3);
+
+        mBtnButton1 = (Button)findViewById(R.id.btn_button1);
+        mBtnButton2 = (Button)findViewById(R.id.btn_button2);
+        mBtnButton3 = (Button)findViewById(R.id.btn_button3);
+
+        mBtnRadio1.setChecked(true);
+        mBtnButton1.setOnClickListener(this);
+        mBtnButton2.setOnClickListener(this);
+        mBtnButton3.setOnClickListener(this);
     }
 
     private void setData(int count, float range) {
@@ -245,4 +265,26 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.btn_button1:
+                mBtnButton1.setSelected(true);
+                mBtnButton2.setSelected(false);
+                mBtnButton3.setSelected(false);
+                break;
+            case R.id.btn_button2:
+                mBtnButton1.setSelected(false);
+                mBtnButton2.setSelected(true);
+                mBtnButton3.setSelected(false);
+                break;
+            case R.id.btn_button3:
+                mBtnButton1.setSelected(false);
+                mBtnButton2.setSelected(false);
+                mBtnButton3.setSelected(true);
+                break;
+            default:
+                break;
+        }
+    }
 }

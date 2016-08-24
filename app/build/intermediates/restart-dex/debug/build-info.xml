@@ -4,22 +4,21 @@
     api-level="21"
     density="xxhdpi"
     format="7"
-    timestamp="21012202701702"
-    token="-3214343740110970318"
-    verifier="R_CLASS_CHANGE" >
+    timestamp="29915870154071"
+    token="-3214343740110970318" >
 
     <task
         name="javac"
-        duration="701" />
+        duration="4488" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="98" />
+        duration="891" />
     <task
         name="verifier"
-        duration="71" />
+        duration="31" />
 
     <artifact
         location="D:\Android\MPAndroidChartLine\app\build\intermediates\res\resources-debug.ap_"
@@ -36,9 +35,7 @@
             location="D:\Android\MPAndroidChartLine\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
     </build>
-    <build
-        timestamp="21012202701702"
-        verifier="R_CLASS_CHANGE" >
+    <build timestamp="29915870154071" >
         <artifact
             location="D:\Android\MPAndroidChartLine\app\build\intermediates\res\resources-debug.ap_"
             type="RESOURCES" />
