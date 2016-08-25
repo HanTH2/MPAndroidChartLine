@@ -7,9 +7,13 @@ import android.graphics.drawable.Drawable;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.FrameLayout;
+import android.widget.LinearLayout;
 import android.widget.RadioButton;
+import android.widget.TextView;
 
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.components.Legend;
@@ -29,6 +33,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private LineChart mChart;
     private RadioButton mBtnRadio1, mBtnRadio2, mBtnRadio3;
     private Button mBtnButton1, mBtnButton2, mBtnButton3;
+    private LinearLayout mContainerChar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -97,6 +102,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         leftAxis.setDrawZeroLine(true);
         leftAxis.setLabelCount(10, true);
 
+//        TextView xAxisName = new TextView(getApplicationContext());
+//        xAxisName.setText("(Kg)");
+//        xAxisName.setTextColor(Color.RED);
+//        FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.WRAP_CONTENT, FrameLayout.LayoutParams.WRAP_CONTENT);
+//        params.gravity = Gravity.CENTER_HORIZONTAL | Gravity.BOTTOM;
+//        params.setMargins(0, 0, 0, 0);
+//
+//        VerticalTextView yAxisName = new VerticalTextView(getApplicationContext(),null);
+//        yAxisName.setText("(week)");
+//        yAxisName.setTextColor(Color.RED);
+//        FrameLayout.LayoutParams params2 = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.WRAP_CONTENT, FrameLayout.LayoutParams.WRAP_CONTENT);
+//        params2.gravity = Gravity.RIGHT | Gravity.CENTER_VERTICAL | Gravity.END;
+//        mChart.addView(xAxisName, params);
+//        mChart.addView(yAxisName,params2);
+
         // limit lines are drawn behind data (and not on top)
         leftAxis.setDrawLimitLinesBehindData(true);
 
@@ -127,6 +147,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtnButton1 = (Button)findViewById(R.id.btn_button1);
         mBtnButton2 = (Button)findViewById(R.id.btn_button2);
         mBtnButton3 = (Button)findViewById(R.id.btn_button3);
+        mContainerChar = (LinearLayout)findViewById(R.id.container_chart);
 
         mBtnRadio1.setChecked(true);
         mBtnButton1.setOnClickListener(this);
