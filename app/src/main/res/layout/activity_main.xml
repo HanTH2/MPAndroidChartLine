@@ -7,7 +7,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="30dp"
+        android:layout_height="25dp"
         android:layout_marginLeft="@dimen/fragment_chart_margin_menu_selector"
         android:layout_marginRight="@dimen/fragment_chart_margin_menu_selector"
         android:layout_marginBottom="@dimen/fragment_chart_margin_btn_bottom"
@@ -59,7 +59,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="35dp"
         android:layout_marginLeft="@dimen/fragment_chart_margin_menu_selector"
         android:layout_marginRight="@dimen/fragment_chart_margin_menu_selector"
         android:layout_marginBottom="@dimen/fragment_chart_margin_btn_bottom"
@@ -118,7 +118,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="37dp"
         android:orientation="horizontal"
         android:background="@color/pastel60"
         android:paddingTop="@dimen/fragment_chart_margin_btn_bottom"
@@ -148,7 +148,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="43dp"
         android:orientation="horizontal"
         android:background="@color/pastel"
         android:layout_marginBottom="1dp"

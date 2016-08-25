@@ -4,7 +4,7 @@
     api-level="21"
     density="xxhdpi"
     format="7"
-    timestamp="21659573403620"
+    timestamp="21819210037631"
     token="-3214343740110970318" >
 
     <task
@@ -39,7 +39,7 @@
             location="D:\Android\MPAndroidChartLine\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_0\classes.dex"
             type="DEX" />
     </build>
-    <build timestamp="21659573403620" >
+    <build timestamp="21819210037631" >
         <artifact
             location="D:\Android\MPAndroidChartLine\app\build\intermediates\res\resources-debug.ap_"
             type="RESOURCES" />
