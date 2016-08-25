@@ -16,6 +16,10 @@
         "source": "D:\\Android\\MPAndroidChartLine\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
+        "merged": "D:\\Android\\MPAndroidChartLine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\custom_marker_view.xml",
+        "source": "D:\\Android\\MPAndroidChartLine\\app\\src\\main\\res\\layout\\custom_marker_view.xml"
+    },
+    {
         "merged": "D:\\Android\\MPAndroidChartLine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_dropdown_item_icons_2line.xml",
         "source": "D:\\Android\\MPAndroidChartLine\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
     },
@@ -34,6 +38,10 @@
     {
         "merged": "D:\\Android\\MPAndroidChartLine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_cancel_action.xml",
         "source": "D:\\Android\\MPAndroidChartLine\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\layout\\notification_media_cancel_action.xml"
+    },
+    {
+        "merged": "D:\\Android\\MPAndroidChartLine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\radar_markerview.xml",
+        "source": "D:\\Android\\MPAndroidChartLine\\app\\src\\main\\res\\layout\\radar_markerview.xml"
     },
     {
         "merged": "D:\\Android\\MPAndroidChartLine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_title_item.xml",

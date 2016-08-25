@@ -20,6 +20,7 @@ import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
 import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
+import com.github.mikephil.charting.utils.ColorTemplate;
 import com.github.mikephil.charting.utils.Utils;
 
 import java.util.ArrayList;
@@ -46,9 +47,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         // enable scaling and dragging
         mChart.setDragEnabled(true);
-        mChart.setScaleEnabled(true);
-        // mChart.setScaleXEnabled(true);
-        // mChart.setScaleYEnabled(true);
+        mChart.setScaleEnabled(false);
+        //mChart.setScaleXEnabled(false);
+        //mChart.setScaleYEnabled(false);
 
         // if disabled, scaling can be done on x- and y-axis separately
         mChart.setPinchZoom(true);
@@ -56,10 +57,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mChart.setDrawGridBackground(true);
         mChart.setDrawBorders(true);
         mChart.setBorderColor(Color.BLUE);
+        mChart.setGridBackgroundColor(Color.WHITE);
         //mChart.setVisibleXRange(0, 10);
 
         // set an alternative background color
-        // mChart.setBackgroundColor(Color.GRAY);
+        mChart.setBackgroundColor(getResources().getColor(R.color.pastel));
+
+        // create a custom MarkerView (extend MarkerView) and specify the layout
+        // to use for it
+        MyMarkerView mv = new MyMarkerView(this, R.layout.custom_marker_view);
+        mv.setChartView(mChart); // For bounds control
+        mChart.setMarker(mv); // Set the marker to the chart
 
         // x-axis limit line
         LimitLine llXAxis = new LimitLine(10f, "Index 10");
@@ -73,35 +81,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         xAxis.setAxisMaximum(44f);
         xAxis.setAxisMinimum(0f);
         xAxis.setLabelCount(12, true);
-        xAxis.setGridColor(R.color.colorBrown);
-        xAxis.setAxisLineColor(R.color.colorBrown);
+        //xAxis.setGridColor(R.color.white);
+        //xAxis.setAxisLineColor(R.color.white);
         //xAxis.setValueFormatter(new MyXAxisValueFormatter());
         //xAxis.addLimitLine(llXAxis); // add x-axis limit line
 
         Typeface tf = Typeface.createFromAsset(getAssets(), "OpenSans-Regular.ttf");
 
-//        LimitLine ll1 = new LimitLine(60f, "Upper Limit");
-//        ll1.setLineWidth(2f);
-//        ll1.enableDashedLine(0f, 0f, 0f);
-//        ll1.setLabelPosition(LimitLine.LimitLabelPosition.RIGHT_TOP);
-//        ll1.setTextSize(10f);
-//        ll1.setTypeface(tf);
-//        ll1.setTextColor(Color.YELLOW);
-//        ll1.setLineColor(Color.YELLOW);
-//
-//        LimitLine ll2 = new LimitLine(45f, "Lower Limit");
-//        ll2.setLineWidth(2f);
-//        ll2.enableDashedLine(0f, 0f, 0f);
-//        ll2.setLabelPosition(LimitLine.LimitLabelPosition.RIGHT_BOTTOM);
-//        ll2.setTextSize(10f);
-//        ll2.setTypeface(tf);
-//        ll2.setTextColor(Color.RED);
-//        ll2.setLineColor(Color.RED);
-
         YAxis leftAxis = mChart.getAxisLeft();
         leftAxis.removeAllLimitLines(); // reset all limit lines to avoid overlapping lines
-        //leftAxis.addLimitLine(ll1);
-        //leftAxis.addLimitLine(ll2);
         leftAxis.setAxisMaximum(62.0f);
         leftAxis.setAxisMinimum(44.0f);
         //leftAxis.setYOffset(20f);
@@ -114,15 +102,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         mChart.getAxisRight().setEnabled(false);
 
-        //mChart.getViewPortHandler().setMaximumScaleY(2f);
-        //mChart.getViewPortHandler().setMaximumScaleX(2f);
-
         // add data
         setData(44, 4);
-
-        //mChart.setVisibleXRange(20f, 50f);
-        //mChart.setVisibleYRange(20f, 50f, YAxis.AxisDependency.LEFT);
-        //mChart.centerViewTo(20, 50, YAxis.AxisDependency.LEFT);
 
         mChart.animateX(2500);
         //mChart.invalidate();
@@ -180,16 +161,46 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             values2.add(new Entry(i, val));
         }
 
-        LineDataSet set1, set2, set3;;
+        ArrayList<Entry> colorValues1 = new ArrayList<Entry>();
+        colorValues1.add(new Entry(4, 62));
+        colorValues1.add(new Entry(8, 62));
+
+        ArrayList<Entry> colorValues2 = new ArrayList<Entry>();
+        colorValues2.add(new Entry(12, 62));
+        colorValues2.add(new Entry(16, 62));
+
+        ArrayList<Entry> colorValues3 = new ArrayList<Entry>();
+        colorValues3.add(new Entry(20, 62));
+        colorValues3.add(new Entry(24, 62));
+
+        ArrayList<Entry> colorValues4 = new ArrayList<Entry>();
+        colorValues4.add(new Entry(28, 62));
+        colorValues4.add(new Entry(32, 62));
+
+        ArrayList<Entry> colorValues5 = new ArrayList<Entry>();
+        colorValues5.add(new Entry(36, 62));
+        colorValues5.add(new Entry(40, 62));
+
+        LineDataSet set1, set2, set3, setColor1, setColor2, setColor3, setColor4, setColor5;
 
         if (mChart.getData() != null &&
                 mChart.getData().getDataSetCount() > 0) {
             set1 = (LineDataSet)mChart.getData().getDataSetByIndex(0);
             set2 = (LineDataSet) mChart.getData().getDataSetByIndex(1);
             set3 = (LineDataSet) mChart.getData().getDataSetByIndex(2);
+            setColor1 = (LineDataSet) mChart.getData().getDataSetByIndex(3);
+            setColor2 = (LineDataSet) mChart.getData().getDataSetByIndex(4);
+            setColor3 = (LineDataSet) mChart.getData().getDataSetByIndex(5);
+            setColor4 = (LineDataSet) mChart.getData().getDataSetByIndex(6);
+            setColor5 = (LineDataSet) mChart.getData().getDataSetByIndex(7);
             set1.setValues(values);
             set2.setValues(values1);
             set3.setValues(values2);
+            setColor1.setValues(colorValues1);
+            setColor2.setValues(colorValues2);
+            setColor3.setValues(colorValues3);
+            setColor4.setValues(colorValues4);
+            setColor5.setValues(colorValues5);
             mChart.getData().notifyDataChanged();
             mChart.notifyDataSetChanged();
         } else {
@@ -209,14 +220,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             set1.setFormLineWidth(1f);
             set1.setFormLineDashEffect(new DashPathEffect(new float[]{10f, 5f}, 0f));
             set1.setFormSize(0.f);
-
-//            if (Utils.getSDKInt() >= 18) {
+//        if (Utils.getSDKInt() >= 18) {
 //                // fill drawable only supported on api level 18 and above
 //                Drawable drawable = ContextCompat.getDrawable(this, R.drawable.fade_brown);
 //                set1.setFillDrawable(drawable);
 //            }
 //            else {
-//                set1.setFillColor(Color.BLACK);
+//                set1.setFillColor(R.color.white);
 //            }
 
             // create a dataset and give it a type
@@ -253,10 +263,48 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             set3.setFormLineDashEffect(new DashPathEffect(new float[]{10f, 5f}, 0f));
             set3.setFormSize(0.f);
 
+            // create a dataset and give it a type
+            setColor1 = new LineDataSet(colorValues1, null);
+            setColor2 = new LineDataSet(colorValues2, null);
+            setColor3 = new LineDataSet(colorValues3, null);
+            setColor4 = new LineDataSet(colorValues4, null);
+            setColor5 = new LineDataSet(colorValues5, null);
+
+            setColor1.setDrawFilled(true);
+            setColor1.setFillColor(R.color.brown40);
+            setColor1.setDrawCircles(false);
+            setColor1.setDrawValues(false);
+
+            setColor2.setDrawFilled(true);
+            setColor2.setFillColor(R.color.brown40);
+            setColor2.setDrawCircles(false);
+            setColor2.setDrawValues(false);
+
+            setColor3.setDrawFilled(true);
+            setColor3.setFillColor(R.color.brown40);
+            setColor3.setDrawCircles(false);
+            setColor3.setDrawValues(false);
+
+            setColor4.setDrawFilled(true);
+            setColor4.setFillColor(R.color.brown40);
+            setColor4.setDrawCircles(false);
+            setColor4.setDrawValues(false);
+
+            setColor5.setDrawFilled(true);
+            setColor5.setFillColor(R.color.brown40);
+            setColor5.setDrawCircles(false);
+            setColor5.setDrawValues(false);
+
+            // set the line to be drawn like this "- - - - - -";
             ArrayList<ILineDataSet> dataSets = new ArrayList<ILineDataSet>();
             dataSets.add(set1); // add the datasets
-            dataSets.add(set2); // add the datasets
-            dataSets.add(set3); // add the datasets
+            dataSets.add(set2);
+            dataSets.add(set3);
+            dataSets.add(setColor1);
+            dataSets.add(setColor2);
+            dataSets.add(setColor3);
+            dataSets.add(setColor4);
+            dataSets.add(setColor5);
 
             // create a data object with the datasets
             LineData data = new LineData(dataSets);
