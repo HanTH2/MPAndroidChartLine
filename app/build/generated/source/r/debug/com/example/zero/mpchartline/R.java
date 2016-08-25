@@ -1791,8 +1791,7 @@ containing a value of this type.
         public static final int btn_textcolor_selector=0x7f020055;
         public static final int fade_brown=0x7f020056;
         public static final int marker2=0x7f020057;
-        public static final int notification_template_icon_bg=0x7f020059;
-        public static final int radar_marker=0x7f020058;
+        public static final int notification_template_icon_bg=0x7f020058;
     }
     public static final class id {
         public static final int action0=0x7f0b005c;
@@ -1944,11 +1943,10 @@ containing a value of this type.
         public static final int notification_template_media=0x7f040021;
         public static final int notification_template_part_chronometer=0x7f040022;
         public static final int notification_template_part_time=0x7f040023;
-        public static final int radar_markerview=0x7f040024;
-        public static final int select_dialog_item_material=0x7f040025;
-        public static final int select_dialog_multichoice_material=0x7f040026;
-        public static final int select_dialog_singlechoice_material=0x7f040027;
-        public static final int support_simple_spinner_dropdown_item=0x7f040028;
+        public static final int select_dialog_item_material=0x7f040024;
+        public static final int select_dialog_multichoice_material=0x7f040025;
+        public static final int select_dialog_singlechoice_material=0x7f040026;
+        public static final int support_simple_spinner_dropdown_item=0x7f040027;
     }
     public static final class mipmap {
         public static final int ic_launcher=0x7f030000;

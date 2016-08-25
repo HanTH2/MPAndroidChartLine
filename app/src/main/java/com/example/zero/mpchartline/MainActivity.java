@@ -274,26 +274,31 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             setColor1.setFillColor(R.color.brown40);
             setColor1.setDrawCircles(false);
             setColor1.setDrawValues(false);
+            setColor1.setFormSize(0.f);
 
             setColor2.setDrawFilled(true);
             setColor2.setFillColor(R.color.brown40);
             setColor2.setDrawCircles(false);
             setColor2.setDrawValues(false);
+            setColor2.setFormSize(0.f);
 
             setColor3.setDrawFilled(true);
             setColor3.setFillColor(R.color.brown40);
             setColor3.setDrawCircles(false);
             setColor3.setDrawValues(false);
+            setColor3.setFormSize(0.f);
 
             setColor4.setDrawFilled(true);
             setColor4.setFillColor(R.color.brown40);
             setColor4.setDrawCircles(false);
             setColor4.setDrawValues(false);
+            setColor4.setFormSize(0.f);
 
             setColor5.setDrawFilled(true);
             setColor5.setFillColor(R.color.brown40);
             setColor5.setDrawCircles(false);
             setColor5.setDrawValues(false);
+            setColor5.setFormSize(0.f);
 
             // set the line to be drawn like this "- - - - - -";
             ArrayList<ILineDataSet> dataSets = new ArrayList<ILineDataSet>();

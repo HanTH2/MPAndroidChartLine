@@ -239,7 +239,14 @@
                     "endOffset": 1367
                 },
                 "from": {
-                    "file": "D:\\Android\\MPAndroidChartLine\\app\\src\\main\\res\\values\\colors.xml"
+                    "file": "D:\\Android\\MPAndroidChartLine\\app\\src\\main\\res\\values\\colors.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 247,
+                        "endColumn": 38,
+                        "endOffset": 281
+                    }
                 }
             },
             {
@@ -671,14 +678,7 @@
                     "endOffset": 3723
                 },
                 "from": {
-                    "file": "D:\\Android\\MPAndroidChartLine\\app\\src\\main\\res\\values\\colors.xml",
-                    "position": {
-                        "startLine": 12,
-                        "startColumn": 4,
-                        "startOffset": 500,
-                        "endColumn": 40,
-                        "endOffset": 536
-                    }
+                    "file": "D:\\Android\\MPAndroidChartLine\\app\\src\\main\\res\\values\\colors.xml"
                 }
             },
             {

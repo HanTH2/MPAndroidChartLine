@@ -500,8 +500,7 @@ int drawable btn_tab_bottom_selector 0x7f020054
 int drawable btn_textcolor_selector 0x7f020055
 int drawable fade_brown 0x7f020056
 int drawable marker2 0x7f020057
-int drawable notification_template_icon_bg 0x7f020059
-int drawable radar_marker 0x7f020058
+int drawable notification_template_icon_bg 0x7f020058
 int id action0 0x7f0b005c
 int id action_bar 0x7f0b0045
 int id action_bar_activity_content 0x7f0b0000
@@ -647,11 +646,10 @@ int layout notification_template_lines 0x7f040020
 int layout notification_template_media 0x7f040021
 int layout notification_template_part_chronometer 0x7f040022
 int layout notification_template_part_time 0x7f040023
-int layout radar_markerview 0x7f040024
-int layout select_dialog_item_material 0x7f040025
-int layout select_dialog_multichoice_material 0x7f040026
-int layout select_dialog_singlechoice_material 0x7f040027
-int layout support_simple_spinner_dropdown_item 0x7f040028
+int layout select_dialog_item_material 0x7f040024
+int layout select_dialog_multichoice_material 0x7f040025
+int layout select_dialog_singlechoice_material 0x7f040026
+int layout support_simple_spinner_dropdown_item 0x7f040027
 int mipmap ic_launcher 0x7f030000
 int string abc_action_bar_home_description 0x7f060000
 int string abc_action_bar_home_description_format 0x7f060001

@@ -1,11 +1,11 @@
 [
     {
-        "merged": "D:\\Android\\MPAndroidChartLine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media.xml",
-        "source": "D:\\Android\\MPAndroidChartLine\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\layout\\notification_template_media.xml"
-    },
-    {
         "merged": "D:\\Android\\MPAndroidChartLine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_bar.xml",
         "source": "D:\\Android\\MPAndroidChartLine\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\layout\\abc_action_mode_bar.xml"
+    },
+    {
+        "merged": "D:\\Android\\MPAndroidChartLine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media.xml",
+        "source": "D:\\Android\\MPAndroidChartLine\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\layout\\notification_template_media.xml"
     },
     {
         "merged": "D:\\Android\\MPAndroidChartLine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_button_bar_material.xml",
@@ -38,10 +38,6 @@
     {
         "merged": "D:\\Android\\MPAndroidChartLine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_cancel_action.xml",
         "source": "D:\\Android\\MPAndroidChartLine\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\layout\\notification_media_cancel_action.xml"
-    },
-    {
-        "merged": "D:\\Android\\MPAndroidChartLine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\radar_markerview.xml",
-        "source": "D:\\Android\\MPAndroidChartLine\\app\\src\\main\\res\\layout\\radar_markerview.xml"
     },
     {
         "merged": "D:\\Android\\MPAndroidChartLine\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_title_item.xml",
